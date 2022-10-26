@@ -81,12 +81,12 @@ def crop_image(x_start, y_start, x_end, y_end, img, i, table_id):
 
 def detect_table_cleanliness(i, table_id):
     # custom vision credentials information
-    prediction_key = '3447cb660c544c70bcb1a9d2933f1054'
-    ENDPOINT = 'https://mcdonalds-prediction.cognitiveservices.azure.com/'
+    prediction_key = '<Your Prediction Key>'
+    ENDPOINT = '<Your Endpoint>'
     credentials = ApiKeyCredentials(in_headers={"Prediction-key": prediction_key})
     predictor = CustomVisionPredictionClient(endpoint=ENDPOINT, credentials=credentials)
-    project_id = '3cbb2c20-e80e-443c-8d94-7bbde5f81f5e'
-    PUBLISH_ITERATION_NAME = 'Iteration2'
+    project_id = '<Your Project Id>'
+    PUBLISH_ITERATION_NAME = '<Internation name>'
 
     prediction_credentials = ApiKeyCredentials(in_headers={"Prediction-key": prediction_key})
     predictor = CustomVisionPredictionClient(ENDPOINT, prediction_credentials)
@@ -133,7 +133,7 @@ def main():
     
     # custom vision credentials information
     prediction_key = '<Your Prediction Key>'
-    ENDPOINT = 'https://mcdonalds-prediction.cognitiveservices.azure.com/'
+    ENDPOINT = '<Your Endpoint>'
     credentials = ApiKeyCredentials(in_headers={"Prediction-key": prediction_key})
     predictor = CustomVisionPredictionClient(endpoint=ENDPOINT, credentials=credentials)
     project_id = '<Your Project Id>'
